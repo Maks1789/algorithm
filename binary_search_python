@@ -1,0 +1,32 @@
+sort_list = [1, 2,  4 , 6, 8 , 9, 11, 122, 133, 145, 766]
+
+
+def binary_sort(item, list):
+    low = 0
+    high = len(list) -1 
+
+    while low <= high:
+        mid = (low + high) // 2
+        print(f"Low: {low}")
+        print(f"Mid: {mid}")
+        print(f"High: {high}")
+        print('=======================================')
+
+        if item == list[mid]:
+            return mid
+        elif item < list[mid]:
+            high = mid - 1
+            print(f"Low: {low}")
+            print(f"Mid: {mid}")
+            print(f"High: {high}")
+            print('=======================================')
+        elif item > list[mid]:
+            low = mid + 1
+            print(f"Low: {low}")
+            print(f"Mid: {mid}")
+            print(f"High: {high}")
+            print('=======================================')
+            
+            
+print(f"Index of seach element: {binary_sort(4, sort_list)}" )
+
